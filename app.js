@@ -1,12 +1,8 @@
-import get from './getElement.js';
-import getUser from './fetchUser.js';
-import displayUser from './displayUser.js';
+import get from './utils/getElement.js';
+import getUser from './utils/fetchUser.js';
+import displayUser from './utils/displayUser.js';
 
-const img = get('.user-img');
-const title = get('.user-title');
-const value = get('.user-value');
 const btn = get('.btn');
-const btns = [...document.querySelectorAll('.icon')];
 
 const showUser = async () => {
   //get user from api
@@ -18,4 +14,4 @@ const showUser = async () => {
 };
 
 window.addEventListener('DOMContentLoaded', showUser);
-window.addEventListener('click', showUser);
+btn.addEventListener('click', showUser);
